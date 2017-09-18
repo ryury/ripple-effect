@@ -1,0 +1,28 @@
+/* Material Design Ripple effect in pure Javascript & CSS3 by SION. */
+.ripple{
+    position: absolute;
+    top:0; left:0; bottom:0; right:0;
+    overflow: hidden;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    border-radius: inherit;
+    pointer-events: none;
+
+    span{
+        backface-visibility: hidden;
+        position: absolute;
+        border-radius: 50%;
+        transform: scale(0.1);
+        -webkit-transform: scale(0.1);
+        background: rgba(255,255,255, 1);
+        opacity: 0.4;
+        animation: ripple 1.2s forwards;
+        -webkit-animation: ripple 1.2s forwards;
+    }
+}
+@keyframes ripple {
+    to {transform: scale(2); opacity:0;}
+}
+@-webkit-keyframes ripple {
+    to {-webkit-transform: scale(2); opacity:0;}
+}
